@@ -1,27 +1,83 @@
 @use '../../general.scss'as *;
 
 .c-header {
-    padding: 15px 0;
+    background: $colorDarkBlue;
+    color: $colorWhite;
 
-    .c-header__nav {
-        list-style: none;
+    .c-header__show-sidebar {
+        position: relative;
+        padding: 18px;
+        cursor: pointer;
+        border-radius: 50%;
+        @extend %transition;
+        overflow: hidden;
 
-        .c-header__logo {
-            margin-right: auto;
+        &:before,
+        &:after, .c-header__show-sidebar__dash{
+            position: absolute;
+            left: 50%;
+            width: 50%;
+            height: 3px;
+            background: $colorWhite;
+            transform: translateX(-50%);
+        }
 
-            img {
-                max-height: 50px;
+        &:before,
+        &:after{
+            content: '';
+            @extend %transition;
+        }
+
+        .c-header__show-sidebar__dash{
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:before {
+            top: 30%;
+        }
+
+        &:after {
+            bottom: 30%;
+        }
+
+        &:hover,
+        &:focus {
+            background: $colorGray;
+
+            .c-header__show-sidebar__dash{
+                opacity: 0;
+            }
+
+            &:before,
+            &:after {
+                top: 50%;
+                transform-origin: center;
+            }
+
+            &:before {
+                transform: translateX(-50%) rotate(45deg);
+            }
+
+            &:after {
+                bottom: auto;
+                transform: translateX(-50%) rotate(-45deg);
             }
         }
 
-        .c-header__nav-link {
-            padding: 10px;
+    }
 
-            &:hover,
-            &:focus {
-                color: $colorOrange;
-            }
+    .c-header__logo {
+
+        .c-header__image {
+            margin: 0 10px;
+            max-height: 50px;
         }
+    }
 
+    h1 {
+        font-size: 30px;
+        line-height: 34px;
+        font-weight: 600;
     }
 }
