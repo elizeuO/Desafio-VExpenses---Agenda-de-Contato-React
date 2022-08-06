@@ -1,0 +1,27 @@
+@use '../../general.scss'as *;
+
+.c-header {
+    padding: 15px 0;
+
+    .c-header__nav {
+        list-style: none;
+
+        .c-header__logo {
+            margin-right: auto;
+
+            img {
+                max-height: 50px;
+            }
+        }
+
+        .c-header__nav-link {
+            padding: 10px;
+
+            &:hover,
+            &:focus {
+                color: $colorOrange;
+            }
+        }
+
+    }
+}
