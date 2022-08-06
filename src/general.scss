@@ -2,17 +2,35 @@
 
 $colorWhite: #ffff;
 $colorBlack: #222;
-$colorDarkGray: #2A2A2A;
-$colorGray: #67676b;
-$colorOrange: #e36000;
-$colorPurple: purple;
-$colorBlue: #1a8ecb;
-$colorLightBlue: #77FFF5;
+$colorDarkGray: #3c3c3b;
+$colorGray: #b9b9b9;
+$colorOrange: #f7841e;
+$colorDarkBlue: #004886;
+$colorLightBlue: #0a7ee3;
 
 // Typography ----------------------------------------------------------------------
 
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Regular.ttf)
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(./fonts/Roboto-Bold.ttf)
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 900;
+    src: url(./fonts/Roboto-Black.ttf)
+}
+
 $fontSizeDefault: 14px;
-$fontFamilyDefault: sans-serif;
+$fontFamilyDefault: 'Roboto';
+
 
 // Normalize --------------------------------------------------------------------
 
