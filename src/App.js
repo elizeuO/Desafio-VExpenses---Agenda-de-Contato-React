@@ -13,10 +13,10 @@ function App() {
     <Router>
 
       <Header />
-      <GoogleLogin setUser={setUser}/>
+      
 
       <Routes>
-      <Route path="/" element={<Home user={user} />}></Route>
+      <Route path="/" element={<Home user={user} setUser={setUser} />}></Route>
       </Routes>
     </Router>
   );

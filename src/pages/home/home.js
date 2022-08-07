@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
 import Contact from "../../components/contact/contact";
+import NotLogged from "../../components/notLogged/notLogged";
 
-function Home({user}) {
+function Home({user, setUser}) {
   return (
     
       <>
-      {user && (
+      {user ?
       <Contact/>
-      )}
+      : 
+      <NotLogged setUser={setUser}/>
+      }
+
     </>
     
   );

@@ -65,7 +65,7 @@ $fontFamilyDefault: 'Roboto';
 }
 
 .l-flex--vertical {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .l-flex--negative {
@@ -133,11 +133,23 @@ a {
 
 }
 
-%center{
+button {
+    @extend %transition;
+    border: none;
+    cursor: pointer;
+}
+
+%center {
     text-align: center;
 }
 
-.c-section{
+%flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-section {
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -148,4 +160,3 @@ a {
     padding-left: 20px;
     max-width: 1200px;
 }
-

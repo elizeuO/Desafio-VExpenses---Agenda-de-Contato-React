@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import('./googleLogin.scss');
 
 // Add exception for lint
 /* global 
@@ -88,7 +89,7 @@ function GoogleLogin({setUser}) {
   <button id="authorize_button" onClick={(e)=>{
       handleAuthClick();
   }
-    }>Authorize</button>
+    }>Faça login com o Google</button>
   </>);
 }
 

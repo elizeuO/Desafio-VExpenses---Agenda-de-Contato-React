@@ -1,0 +1,11 @@
+@use '../../general.scss'as *;
+
+.c-login-request{
+    @extend %center;
+    height: 50vh;
+
+    h2{
+        font-size: 30px;
+        color: $colorDarkGray;
+    }
+}
