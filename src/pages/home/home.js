@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
+import Contact from "../../components/contact/contact";
 
-function Home() {
+function Home({user}) {
   return (
-    <>
-   
+    
+      <>
+      {user && (
+      <Contact/>
+      )}
     </>
+    
   );
 }
 
