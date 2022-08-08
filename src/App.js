@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./general.scss";
+import "./assets/general.scss";
 import Header from "./components/header/header";
 import Home from "./pages/home/home";
 import GoogleLogin from "./components/googleLogin/googleLogin";
