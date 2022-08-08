@@ -7,8 +7,8 @@ function ContactFieldSet({ type }) {
       case "person":
         return (
           <>
-            <ContactField type="text" name="first-name" placeholder="Nome"/>
-            <ContactField type="text" name="last-name" placeholder="Sobrenome"/>
+            <ContactField type="text" name="firstname" placeholder="Nome"/>
+            <ContactField type="text" name="lastname" placeholder="Sobrenome"/>
           </>
         );
         break;
@@ -28,6 +28,18 @@ function ContactFieldSet({ type }) {
               </>
             );
             break;
+
+            case "address":
+              return (
+                <>
+                  <ContactField type="text" name="address1" placeholder="Endereço 1"/>
+                  <ContactField type="text" name="address2" placeholder="Endereço 2"/>
+                  <ContactField type="text" name="city" placeholder="Cidade"/>
+                  <ContactField type="text" name="state" placeholder="Estado"/>
+                </>
+              );
+              break;
+          
         
       default:
         break;

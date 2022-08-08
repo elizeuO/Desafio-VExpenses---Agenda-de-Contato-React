@@ -18,7 +18,7 @@ function GoogleLogin({ setUser }) {
 
   // Authorization scopes required by the API; multiple scopes can be
   // included, separated by spaces.
-  const scopes = "https://www.googleapis.com/auth/contacts.readonly";
+  const scopes = "https://www.googleapis.com/auth/contacts.readonly https://www.googleapis.com/auth/contacts";
 
   let tokenClient;
   let gapiInited = false;

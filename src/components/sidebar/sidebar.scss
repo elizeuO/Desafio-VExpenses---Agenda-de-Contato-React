@@ -8,7 +8,7 @@
     overflow: hidden;
 
     &.active{
-        width: 25%;
+        width: 33.33%;
         transform: translateX(0);
     }
 
@@ -16,7 +16,7 @@
         @extend %flexCenter;
         margin-bottom: 20px;
         padding: 0 10px;
-        width: 60%;
+        width: 40%;
         background: $colorGreen;
         color: $colorWhite;
         font-size: $fontSizeDefault;
@@ -35,4 +35,8 @@
         }
 ;    }
 
+}
+
+.c-sidebar.active + main{
+    width: 66.66%;
 }

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import ContactItem from "../contactItem/contactItem";
 
-function ContactList() {
   // Add exception for lint
   /* global gapi   google*/
+
+function ContactList() {
 
   const [contacts, setContacts] = useState([]);
 
