@@ -9,6 +9,10 @@ function Sidebar({ sidebarActive }) {
       <Link to="/novo" className="c-button">
         Criar contato
       </Link>
+
+      <Link to="/" className="c-sidebar__link">
+        Contatos
+      </Link>
     </aside>
   );
 }

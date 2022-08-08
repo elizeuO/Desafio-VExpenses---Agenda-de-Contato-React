@@ -12,6 +12,10 @@
   font-weight: 900;
   src: url(./fonts/Roboto-Black.ttf);
 }
+h2 {
+  font-size: 30px;
+}
+
 button, a {
   transition: all 300ms;
 }
@@ -106,7 +110,8 @@ button {
   text-align: center;
 }
 
-.c-section {
+.c-main {
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -120,8 +125,4 @@ button {
 
 .c-login-request {
   height: 50vh;
-}
-.c-login-request h2 {
-  font-size: 30px;
-  color: #3c3c3b;
 }

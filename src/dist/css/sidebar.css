@@ -12,6 +12,12 @@
   font-weight: 900;
   src: url(./fonts/Roboto-Black.ttf);
 }
+h2 {
+  margin-bottom: 15px;
+  font-size: 40px;
+  color: #3c3c3b;
+}
+
 .c-sidebar, button, a {
   transition: all 300ms;
 }
@@ -108,10 +114,13 @@ button {
   align-items: center;
 }
 
+.c-sidebar, .c-main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .c-main {
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .c-container {
@@ -122,8 +131,6 @@ button {
 }
 
 .c-sidebar {
-  padding-top: 20px;
-  padding-bottom: 20px;
   width: 0;
   transform: translateX(-50%);
   overflow: hidden;
@@ -133,6 +140,7 @@ button {
   transform: translateX(0);
 }
 .c-sidebar .c-button {
+  margin-bottom: 20px;
   padding: 0 10px;
   width: 60%;
   background: #08a308;

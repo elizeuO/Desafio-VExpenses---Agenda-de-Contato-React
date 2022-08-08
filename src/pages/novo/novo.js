@@ -1,3 +1,4 @@
+import NewContact from "../../components/contacts/newContact/newContact";
 import NotLogged from "../../components/notLogged/notLogged";
 import Sidebar from "../../components/sidebar/sidebar";
 
@@ -7,6 +8,7 @@ function Novo({ user, setUser, sidebarActive }) {
         {user ? (
           <div className="l-flex">
             <Sidebar sidebarActive={sidebarActive} />
+            <NewContact />
             
           </div>
         ) : (
