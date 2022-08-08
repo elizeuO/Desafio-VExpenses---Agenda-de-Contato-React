@@ -117,7 +117,7 @@ button {
 
 .c-header__toggle-sidebar {
   position: relative;
-  padding: 18px;
+  padding: 16px;
   background: none;
   border-radius: 50%;
   overflow: hidden;
@@ -126,7 +126,7 @@ button {
   position: absolute;
   left: 50%;
   width: 50%;
-  height: 3px;
+  height: 2px;
   background: #ffff;
   transform: translateX(-50%);
 }
