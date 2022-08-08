@@ -103,8 +103,8 @@ button {
 }
 
 .c-section {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .c-container {
@@ -114,8 +114,7 @@ button {
   max-width: 1200px;
 }
 
-.c-contacts-header {
-  margin-bottom: 20px;
-  padding: 0 10px;
-  border-bottom: 1px solid #dfdfdf;
+.c-contact-header__title {
+  color: #3c3c3b;
+  font-weight: 600;
 }
