@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ContactItem from "../contactItem/contactItem";
 
-function Contacts() {
+function ContactList() {
   // Add exception for lint
   /* global gapi   google*/
 
@@ -72,4 +72,4 @@ function Contacts() {
   );
 }
 
-export default Contacts;
+export default ContactList;

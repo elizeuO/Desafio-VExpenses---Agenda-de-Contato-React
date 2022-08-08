@@ -86,7 +86,7 @@ function GoogleLogin({setUser}) {
 
   return (
   <>
-  <button id="authorize_button" onClick={(e)=>{
+  <button className="c-button-login"id="authorize_button" onClick={(e)=>{
       handleAuthClick();
   }
     }>Faça login com o Google</button>

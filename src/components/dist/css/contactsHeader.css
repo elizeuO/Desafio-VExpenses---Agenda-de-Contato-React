@@ -102,12 +102,6 @@ button {
   cursor: pointer;
 }
 
-.c-button-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .c-section {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -120,24 +114,6 @@ button {
   max-width: 1200px;
 }
 
-.c-button-login {
-  margin: 10px auto 0;
-  padding: 10px;
-  background: #ffff;
-  border-radius: 10x;
-  color: #3c3c3b;
-  font-weight: 900;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-}
-.c-button-login:before {
-  content: "";
-  display: inline-block;
-  margin-right: 5px;
-  width: 25px;
-  height: 25px;
-  background: url("../../assets//img/google.png") no-repeat center center;
-  background-size: cover;
-}
-.c-button-login:hover, .c-button-login:focus {
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+.c-contacts-header {
+  padding: 0 10px;
 }

@@ -1,6 +1,6 @@
 @use '../../assets/general.scss' as *;
 
-button {
+.c-button-login {
     @extend %flexCenter;
 
     margin: 10px auto 0;
