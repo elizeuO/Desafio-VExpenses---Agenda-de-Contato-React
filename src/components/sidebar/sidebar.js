@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import "./sidebar.scss";
 
 function Sidebar({ sidebarActive }) {
@@ -5,9 +6,9 @@ function Sidebar({ sidebarActive }) {
 
   return (
     <aside className={classValues}>
-      <a href="/novo" className="c-button">
+      <Link to="/novo" className="c-button">
         Criar contato
-      </a>
+      </Link>
     </aside>
   );
 }

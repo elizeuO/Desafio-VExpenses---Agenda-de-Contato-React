@@ -18,7 +18,7 @@ function ContactList() {
         personFields: "names,phoneNumbers,emailAddresses,photos",
       });
     } catch (err) {
-      console.log("Error getting contact list");
+      console.log("Error getting contact list: ");
       return;
     }
 
@@ -29,9 +29,10 @@ function ContactList() {
       return;
     }
 
-    console.log(connections);
+    setContacts(formatConnectionsResult(connections));
+  }
 
-    // Format result
+  function formatConnectionsResult(connections){
     const result = connections.map((person) => {
       if (undefined !== person.names && undefined !== person.phoneNumbers) {
         const name = person.names[0].displayName;
@@ -49,7 +50,12 @@ function ContactList() {
       }
     });
 
-    const resultSorted = result.sort(function (a, b) {
+    return sortAlphabetically(result)
+
+  }
+
+  function sortAlphabetically(array) {
+    const result = array.sort(function (a, b) {
       if (a.name < b.name) {
         return -1;
       }
@@ -59,8 +65,7 @@ function ContactList() {
       return 0;
     });
 
-    //console.log(resultSorted)
-    setContacts(resultSorted);
+    return result;
   }
 
   return (
@@ -73,7 +78,7 @@ function ContactList() {
                 name={contact.name}
                 phone={contact.phone}
                 email={contact.email}
-                photo = {contact.photo}
+                photo={contact.photo}
               />
             );
           }

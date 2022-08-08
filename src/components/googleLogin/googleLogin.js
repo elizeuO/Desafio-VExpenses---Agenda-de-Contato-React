@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import('./googleLogin.scss');
+import("./googleLogin.scss");
 
 // Add exception for lint
 /* global 
     gapi  
     google*/
 
-function GoogleLogin({setUser}) {
-
+function GoogleLogin({ setUser }) {
+  
   const apiKey = "AIzaSyB7thtadtfOooWCROJVBCFhyRTa5YwSScw";
   const clientID =
     "917135999824-ftj0457nvl12pm0pjdlq3lmh6chu64jt.apps.googleusercontent.com";
@@ -64,8 +64,7 @@ function GoogleLogin({setUser}) {
         throw resp;
       }
 
-      document.getElementById("authorize_button").innerText = "Refresh";
-      await setUser(true);
+      persistUser();
     };
 
     if (gapi.client.getToken() === null) {
@@ -76,21 +75,31 @@ function GoogleLogin({setUser}) {
       // Skip display of account chooser and consent dialog for an existing session.
       tokenClient.requestAccessToken({ prompt: "" });
     }
+  }
 
+  //TODO: Maintain user until browser is closed
+  function persistUser() {
+    setUser(true);
   }
 
   useEffect(() => {
-    gapiLoaded()
+    gapiLoaded();
     gisLoaded();
   });
 
   return (
-  <>
-  <button className="c-button-login"id="authorize_button" onClick={(e)=>{
-      handleAuthClick();
-  }
-    }>Faça login com o Google</button>
-  </>);
+    <>
+      <button
+        className="c-button-login"
+        id="authorize_button"
+        onClick={(e) => {
+          handleAuthClick();
+        }}
+      >
+        Faça login com o Google
+      </button>
+    </>
+  );
 }
 
 export default GoogleLogin;

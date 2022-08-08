@@ -3,6 +3,7 @@ import NotLogged from "../../components/notLogged/notLogged";
 import Sidebar from "../../components/sidebar/sidebar";
 
 function Home({ user, setUser, sidebarActive }) {
+
   return (
     <div className="c-container">
       {user ? (
