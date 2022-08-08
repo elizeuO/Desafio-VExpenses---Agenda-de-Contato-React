@@ -1,0 +1,26 @@
+@use '../../assets/general.scss' as *;
+
+.c-contact-item{
+    display: block;
+    padding: 0 10px;
+    cursor: pointer;
+    .c-contact-item__photo{
+        @extend %center;
+        display: inline-block;
+        margin-right: 5px;
+        height: 30px;
+        width: 30px;
+        background: $colorLightBlue;
+        color: $colorWhite;
+        line-height: 30px;
+        text-transform: uppercase;
+        border-radius: 50%;
+    }
+
+    
+}
+
+.c-section .c-contact-item:nth-child(even){
+    background: $colorLightGray;
+}
+

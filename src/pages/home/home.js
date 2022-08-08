@@ -4,7 +4,7 @@ import NotLogged from "../../components/notLogged/notLogged";
 
 function Home({ user, setUser }) {
   return (
-    <div class="c-container">
+    <div className="c-container">
       {user ? (
         <section className="c-section">
           <ContactsHeader />

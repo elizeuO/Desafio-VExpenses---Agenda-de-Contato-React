@@ -102,6 +102,10 @@ button {
   cursor: pointer;
 }
 
+.c-contact-item .c-contact-item__photo {
+  text-align: center;
+}
+
 .c-section {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -114,6 +118,23 @@ button {
   max-width: 1200px;
 }
 
-.c-contacts-header {
+.c-contact-item {
+  display: block;
   padding: 0 10px;
+  cursor: pointer;
+}
+.c-contact-item .c-contact-item__photo {
+  display: inline-block;
+  margin-right: 5px;
+  height: 30px;
+  width: 30px;
+  background: #0a7ee3;
+  color: #ffff;
+  line-height: 30px;
+  text-transform: uppercase;
+  border-radius: 50%;
+}
+
+.c-section .c-contact-item:nth-child(even) {
+  background: #dfdfdf;
 }
