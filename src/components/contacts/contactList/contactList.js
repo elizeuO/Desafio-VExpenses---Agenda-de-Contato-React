@@ -29,8 +29,6 @@ function ContactList() {
       return;
     }
 
-    console.log(connections);
-
     // Format result
     const result = connections.map((person) => {
       if (undefined !== person.names  && undefined !== person.phoneNumbers) {

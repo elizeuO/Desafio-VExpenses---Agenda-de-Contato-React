@@ -8,15 +8,16 @@ import { useState } from "react";
 function App() {
 
   const [user, setUser] = useState();
+  const [sidebarActive, setSidebarActive] = useState(true);
   
   return (
     <Router>
 
-      <Header />
+      <Header setSidebarActive = {setSidebarActive}/>
       
 
       <Routes>
-      <Route path="/" element={<Home user={user} setUser={setUser} />}></Route>
+      <Route path="/" element={<Home user={user} setUser={setUser} sidebarActive={sidebarActive} />}></Route>
       </Routes>
     </Router>
   );

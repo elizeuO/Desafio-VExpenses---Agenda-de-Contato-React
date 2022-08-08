@@ -12,7 +12,7 @@
   font-weight: 900;
   src: url(./fonts/Roboto-Black.ttf);
 }
-button, a {
+.c-header__toggle-sidebar, .c-header__toggle-sidebar:before, .c-header__toggle-sidebar:after, button, a {
   transition: all 300ms;
 }
 
@@ -113,4 +113,50 @@ button {
   padding-right: 20px;
   padding-left: 20px;
   max-width: 1200px;
+}
+
+.c-header__toggle-sidebar {
+  position: relative;
+  padding: 18px;
+  background: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.c-header__toggle-sidebar:before, .c-header__toggle-sidebar:after, .c-header__toggle-sidebar .c-header__toggle-sidebar__dash {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 3px;
+  background: #ffff;
+  transform: translateX(-50%);
+}
+.c-header__toggle-sidebar:before, .c-header__toggle-sidebar:after {
+  content: "";
+}
+.c-header__toggle-sidebar .c-header__toggle-sidebar__dash {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.c-header__toggle-sidebar:before {
+  top: 30%;
+}
+.c-header__toggle-sidebar:after {
+  bottom: 30%;
+}
+.c-header__toggle-sidebar.active {
+  background: #b9b9b9;
+}
+.c-header__toggle-sidebar.active .c-header__toggle-sidebar__dash {
+  opacity: 0;
+}
+.c-header__toggle-sidebar.active:before, .c-header__toggle-sidebar.active:after {
+  top: 50%;
+  transform-origin: center;
+}
+.c-header__toggle-sidebar.active:before {
+  transform: translateX(-50%) rotate(45deg);
+}
+.c-header__toggle-sidebar.active:after {
+  bottom: auto;
+  transform: translateX(-50%) rotate(-45deg);
 }

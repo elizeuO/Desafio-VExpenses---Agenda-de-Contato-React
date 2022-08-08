@@ -1,0 +1,33 @@
+@use '../../assets/general.scss' as *;
+
+.c-sidebar{
+    @extend %transition;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 0;
+    transform: translateX(-50%);
+    overflow: hidden;
+
+    &.active{
+        width: 25%;
+        transform: translateX(0);
+    }
+
+    button{
+        @extend %flexCenter;
+        padding: 0 10px;
+        background: $colorGreen;
+        color: $colorWhite;
+        font-size: $fontSizeDefault;
+        border-radius: 20px;
+        font-weight: 600;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+
+        &:before{
+            content: '+';
+            margin-right: 5px;
+            font-size: 35px;
+        }
+;    }
+
+}

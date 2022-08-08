@@ -2,15 +2,13 @@ import ContactsWrapper from "../../components/contacts/contactsWrapper/contactsW
 import NotLogged from "../../components/notLogged/notLogged";
 import Sidebar from "../../components/sidebar/sidebar";
 
-function Home({ user, setUser }) {
+function Home({ user, setUser, sidebarActive }) {
   return (
     <div className="c-container">
       {user ? (
         <div className="l-flex">
-        <Sidebar />
-        <section className="c-section">
+          <Sidebar sidebarActive={sidebarActive} />
           <ContactsWrapper />
-        </section>
         </div>
       ) : (
         <NotLogged setUser={setUser} />

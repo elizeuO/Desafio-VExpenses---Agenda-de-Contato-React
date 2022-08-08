@@ -6,6 +6,7 @@ $colorDarkGray: #3c3c3b;
 $colorGray: #b9b9b9;
 $colorLightGray: #f3f3f3;
 $colorOrange: #f7841e;
+$colorGreen: #08a308;
 $colorDarkBlue: #004886;
 $colorLightBlue: #0a7ee3;
 
@@ -150,7 +151,8 @@ button {
     align-items: center;
 }
 
-.c-section {
+.c-main {
+    width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
 }

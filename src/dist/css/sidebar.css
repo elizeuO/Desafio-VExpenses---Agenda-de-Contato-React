@@ -12,7 +12,7 @@
   font-weight: 900;
   src: url(./fonts/Roboto-Black.ttf);
 }
-button, a {
+.c-sidebar, button, a {
   transition: all 300ms;
 }
 
@@ -102,6 +102,12 @@ button {
   cursor: pointer;
 }
 
+.c-sidebar button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .c-main {
   width: 100%;
   padding-top: 20px;
@@ -113,4 +119,30 @@ button {
   padding-right: 20px;
   padding-left: 20px;
   max-width: 1200px;
+}
+
+.c-sidebar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 0;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.c-sidebar.active {
+  width: 25%;
+  transform: translateX(0);
+}
+.c-sidebar button {
+  padding: 0 10px;
+  background: #08a308;
+  color: #ffff;
+  font-size: 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+.c-sidebar button:before {
+  content: "+";
+  margin-right: 5px;
+  font-size: 35px;
 }

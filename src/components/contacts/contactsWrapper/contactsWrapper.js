@@ -2,11 +2,11 @@ import ContactList from "../contactList/contactList";
 import ContactsHeader from "../contactsHeader/contactsHeader";
 
 function ContactsWrapper() {
-  return <section className="c-section">
+  return <main className="c-main">
     <ContactsHeader />
     <ContactList />
     
-  </section>;
+  </main>;
 }
 
 export default ContactsWrapper;
