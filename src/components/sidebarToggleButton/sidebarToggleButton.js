@@ -4,9 +4,9 @@ import "./sideBarToggleButton.scss";
 
 function SidebarToggleButton({setSidebarActive}) {
 
-  const [buttonActive, setButtonActive] = useState(false);
+  const [buttonActive, setButtonActive] = useState(true);
 
-  const classValues = buttonActive ? 'c-header__toggle-sidebar': 'c-header__toggle-sidebar active';
+  const classValues = buttonActive ? 'c-header__toggle-sidebar  active': 'c-header__toggle-sidebar';
 
   function toggleSidebarButton(ev){
     
