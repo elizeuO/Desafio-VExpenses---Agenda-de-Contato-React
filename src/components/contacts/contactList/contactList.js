@@ -15,7 +15,7 @@ function ContactList() {
       response = await gapi.client.people.people.connections.list({
         resourceName: "people/me",
         pageSize: 500,
-        personFields: "names,phoneNumbers,emailAddresses",
+        personFields: "names,phoneNumbers,emailAddresses,photos",
       });
     } catch (err) {
       console.log("Error getting contact list");
@@ -29,15 +29,18 @@ function ContactList() {
       return;
     }
 
+    console.log(connections);
+
     // Format result
     const result = connections.map((person) => {
-      if (undefined !== person.names  && undefined !== person.phoneNumbers) {
+      if (undefined !== person.names && undefined !== person.phoneNumbers) {
         const name = person.names[0].displayName;
         const phone = person.phoneNumbers[0].value;
+        const photo = person.photos[0].url;
 
-        const data = { name: name, phone: phone };
+        const data = { name: name, phone: phone, photo: photo };
 
-        if(undefined !== person.emailAddresses){
+        if (undefined !== person.emailAddresses) {
           const email = person.emailAddresses[0].value;
           data.email = email;
         }
@@ -46,26 +49,35 @@ function ContactList() {
       }
     });
 
-    const resultSorted = result.sort(function(a, b){
-      if(a.name < b.name) { return -1; }
-      if(a.name > b.name) { return 1; }
+    const resultSorted = result.sort(function (a, b) {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
       return 0;
-  })
+    });
 
-  //console.log(resultSorted)
-    setContacts(resultSorted );
+    //console.log(resultSorted)
+    setContacts(resultSorted);
   }
-   
 
   return (
     <>
       {contacts.length > 0 &&
-      contacts.map((contact) => {
-        
-        if(contact !== undefined){
-          return <ContactItem name={contact.name} phone={contact.phone} email={contact.email} />;
-        }
-      })}
+        contacts.map((contact) => {
+          if (contact !== undefined) {
+            return (
+              <ContactItem
+                name={contact.name}
+                phone={contact.phone}
+                email={contact.email}
+                photo = {contact.photo}
+              />
+            );
+          }
+        })}
     </>
   );
 }

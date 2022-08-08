@@ -1,12 +1,12 @@
 import "./contactItem.scss";
 
-function ContactItem({ name, phone, email }) {
+function ContactItem({ name, phone, email, photo }) {
   return (
-    <a className="c-contact-item">
+    <a href="" className="c-contact-item">
       <div className="l-flex l-flex---center l-flex--wrap l-flex--negative">
         <article className="l__col-4">
-          <div className="c-contact-item__photo">{name.slice(0,1)}</div>
 
+          <img src={photo} className="c-contact-item__photo" />
           {name}
         </article>
 
