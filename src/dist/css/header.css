@@ -12,7 +12,7 @@
   font-weight: 900;
   src: url(./fonts/Roboto-Black.ttf);
 }
-.c-header .c-header__show-sidebar, .c-header .c-header__show-sidebar:before, .c-header .c-header__show-sidebar:after, a {
+.c-header .c-header__show-sidebar, .c-header .c-header__show-sidebar:before, .c-header .c-header__show-sidebar:after, button, a {
   transition: all 300ms;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .l-flex--vertical {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .l-flex--negative {
@@ -94,6 +94,11 @@ img {
 a {
   color: #222;
   text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
   cursor: pointer;
 }
 

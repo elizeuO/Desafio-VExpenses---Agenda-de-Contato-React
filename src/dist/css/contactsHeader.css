@@ -102,10 +102,6 @@ button {
   cursor: pointer;
 }
 
-.c-login-request {
-  text-align: center;
-}
-
 .c-section {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -118,10 +114,8 @@ button {
   max-width: 1200px;
 }
 
-.c-login-request {
-  height: 50vh;
-}
-.c-login-request h2 {
-  font-size: 30px;
-  color: #3c3c3b;
+.c-contacts-header {
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border-bottom: 1px solid #b9b9b9;
 }
