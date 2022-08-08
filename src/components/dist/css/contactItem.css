@@ -106,7 +106,8 @@ button {
   text-align: center;
 }
 
-.c-section {
+.c-main {
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -135,6 +136,6 @@ button {
   border-radius: 50%;
 }
 
-.c-section .c-contact-item:nth-child(even) {
+.c-main .c-contact-item:nth-child(even) {
   background: #f3f3f3;
 }
