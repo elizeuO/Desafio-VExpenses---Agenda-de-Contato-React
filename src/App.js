@@ -4,6 +4,7 @@ import Header from "./components/header/header";
 import Home from "./pages/home/home";
 import { useState } from "react";
 import Novo from "./pages/novo/novo";
+import Footer from "./components/footer/footer";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -27,6 +28,8 @@ function App() {
           }
         ></Route>
       </Routes>
+
+      <Footer />
     </Router>
   );
 }

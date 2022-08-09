@@ -4,6 +4,7 @@ import ContactForm from "../contactForm/contactForm";
 /* global gapi   google*/
 
 function NewContact() {
+  
   async function createContact() {
     let response;
     try {

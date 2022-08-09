@@ -36,6 +36,7 @@ function ContactFieldSet({ type }) {
                   <ContactField type="text" name="address2" placeholder="Endereço 2"/>
                   <ContactField type="text" name="city" placeholder="Cidade"/>
                   <ContactField type="text" name="state" placeholder="Estado"/>
+                  <ContactField type="text" name="cep" placeholder="CEP"/>
                 </>
               );
               break;

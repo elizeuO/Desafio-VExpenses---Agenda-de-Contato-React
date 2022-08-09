@@ -1,0 +1,24 @@
+@use '../../assets/general.scss' as *;
+
+.c-footer{
+    @extend %center;
+    padding: 20px 0;
+    background: $colorBlack;
+    color: $colorWhite;
+
+    a{
+        display: block;
+        margin-bottom: 10px;
+        opacity: .6;
+
+        &:hover, &:focus{
+            opacity: 1;
+        }
+
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    
+}

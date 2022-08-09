@@ -126,6 +126,7 @@ button.c-button:hover, button.c-button:focus {
 }
 
 .c-main {
+  min-height: calc(100vh - 175px);
   width: 100%;
 }
 

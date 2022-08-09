@@ -183,7 +183,9 @@ button {
 
 .c-main {
     @extend %verticalGeneralPadding;
+    min-height: calc(100vh - 175px);
     width: 100%;
+
 }
 
 .c-container {
