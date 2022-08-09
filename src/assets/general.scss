@@ -6,6 +6,8 @@ $colorDarkGray: #3c3c3b;
 $colorGray: #b9b9b9;
 $colorLightGray: #f3f3f3;
 $colorOrange: #f7841e;
+$colorRed: red;
+$colorLightRed: #ffdede;
 $colorGreen: #08a308;
 $colorDarkBlue: #004886;
 $colorLightBlue: #0a7ee3;
@@ -35,7 +37,7 @@ $fontSizeSubtitle: 40px;
 $fontFamilyDefault: 'Roboto';
 
 h2 {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-size: $fontSizeSubtitle;
     color: $colorDarkGray;
 }
@@ -118,7 +120,7 @@ h2 {
 }
 
 
-//Components --------------------------------------------------------------------
+//General --------------------------------------------------------------------
 html,
 body {
     overflow-x: hidden;
@@ -160,6 +162,11 @@ button {
         &:focus {
             background: $colorDarkBlue;
             ;
+        }
+
+        &[disabled]{
+            background: $colorGray;
+            pointer-events: none;
         }
     }
 }

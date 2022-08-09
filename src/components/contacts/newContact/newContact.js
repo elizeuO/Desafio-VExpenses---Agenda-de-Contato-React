@@ -1,46 +1,55 @@
+import { useState } from "react";
 import ContactForm from "../contactForm/contactForm";
 
 // Add exception for lint
 /* global gapi   google*/
 
 function NewContact() {
-  
-  async function createContact() {
-    let response;
-    try {
-      response = await gapi.client.people.people.createContact({
-        resource: {
-          names: {
-            givenName: "Testei",
-            familyName: "Testando",
-          },
-          emailAddresses: {
-            value: "teste@teste.com",
-          },
-          phoneNumbers: [
-            {
-              value: "99 99999",
-            },
-          ],
-        },
-      });
-    } catch (err) {
-      console.log("Error creating contact ");
-      return;
-    }
 
-    console.log(response);
+  const [contactProfile, setContactProfile] = useState({});
+  const [disableButton, setDisableButton] = useState(true);
+
+  function isButtonDisabled(){
+   return  disableButton ? true: false;
+  }
+
+  async function createContact() {
+    console.log(contactProfile);
+     let response;
+     try {
+       response = await gapi.client.people.people.createContact({
+         resource: {
+           names: {
+             givenName: contactProfile.givenName,
+             familyName: contactProfile.familyName,
+           },
+           emailAddresses: {
+             value: contactProfile.emailAddress,
+           },
+           phoneNumbers: [
+             {
+               value: contactProfile.phoneNumber,
+             },
+           ],
+         },
+       });
+     } catch (err) {
+       console.log("Error creating contact ");
+       return;
+     }
+
+     console.log(response);
   }
 
   return (
     <main className="c-main">
       <h2>Novo contato</h2>
 
-      <button className="c-button" onClick={createContact}>
+      <button className="c-button" onClick={createContact} disabled={isButtonDisabled()}>
         Salvar
       </button>
 
-      <ContactForm />
+      <ContactForm setContactProfile = {setContactProfile} setDisableButton={setDisableButton}/>
     </main>
   );
 }

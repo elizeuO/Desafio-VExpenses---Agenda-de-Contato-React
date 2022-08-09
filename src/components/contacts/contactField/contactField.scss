@@ -1,6 +1,8 @@
 @use '../../../assets/general.scss' as *;
 
 .c-contact-field{
+
+  
     input{
         @extend %transition;
         padding: 20px 5px;
@@ -18,6 +20,20 @@
         background: $colorLightGray;
         border-color: $colorDarkBlue;
         }
-
     }
+
+    &.invalid{
+        color: $colorRed;
+
+        span{
+            display: block;
+            margin-top: 10px;
+        }
+
+        input{
+            border-color: $colorRed;
+            background: $colorLightRed;
+        }
+    }
+    
 }

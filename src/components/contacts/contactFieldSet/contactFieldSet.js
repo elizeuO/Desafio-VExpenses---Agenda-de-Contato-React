@@ -1,53 +1,141 @@
 import ContactField from "../contactField/contactField";
 
-function ContactFieldSet({ type }) {
+import { FaUserAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaBuilding } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+
+import "./contactFieldSet.scss";
+
+function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidForm }) {
   function switchType() {
     switch (type) {
-
       case "person":
         return (
           <>
-            <ContactField type="text" name="firstname" placeholder="Nome"/>
-            <ContactField type="text" name="lastname" placeholder="Sobrenome"/>
+            <div className="c-contact-field-set__heading">
+              <FaUserAlt />
+              Título:
+            </div>
+
+            <ContactField
+              type="text"
+              name="givenName"
+              placeholder="Nome"
+              setContactProfile={setContactProfile}
+              setInvalidFields={setInvalidFields}
+              isValidForm = {isValidForm}
+            />
+            <ContactField
+              type="text"
+              name="familyName"
+              placeholder="Sobrenome"
+              setContactProfile={setContactProfile}
+              setInvalidFields={setInvalidFields}
+              isValidForm = {isValidForm}
+            />
           </>
         );
         break;
 
-        case "email":
-            return (
-              <>
-                <ContactField type="email" name="email" placeholder="E-mail"/>
-              </>
-            );
-            break;
+      case "email":
+        return (
+          <>
+           <div className="c-contact-field-set__heading">
+              <FaEnvelope />
+              E-mail:
+            </div>
 
-            case "phone":
-            return (
-              <>
-                <ContactField type="phone" name="phone" placeholder="Telefone"/>
-              </>
-            );
-            break;
+            <ContactField
+              type="email"
+              name="emailAddress"
+              placeholder="E-mail"
+              setContactProfile={setContactProfile}
+              setInvalidFields={setInvalidFields}
+              isValidForm = {isValidForm}
+            />
+          </>
+        );
+        break;
 
-            case "address":
-              return (
-                <>
-                  <ContactField type="text" name="address1" placeholder="Endereço 1"/>
-                  <ContactField type="text" name="address2" placeholder="Endereço 2"/>
-                  <ContactField type="text" name="city" placeholder="Cidade"/>
-                  <ContactField type="text" name="state" placeholder="Estado"/>
-                  <ContactField type="text" name="cep" placeholder="CEP"/>
-                </>
-              );
-              break;
-          
-        
+      case "phone":
+        return (
+          <>
+           <div className="c-contact-field-set__heading">
+              <FaPhoneAlt />
+              Telefones:
+            </div>
+
+            <ContactField
+              type="phone"
+              name="phoneNumber"
+              placeholder="Telefone"
+              setContactProfile={setContactProfile}
+              setInvalidFields={setInvalidFields}
+              isValidForm = {isValidForm}
+            />
+          </>
+        );
+        break;
+
+      case "address":
+        return (
+          <>
+           <div className="c-contact-field-set__heading">
+              <FaBuilding />
+              Endereços:
+            </div>
+
+            <ContactField
+              type="text"
+              name="address1"
+              placeholder="Endereço 1"
+              setContactProfile={setContactProfile}
+              setInvalidFields={setInvalidFields}
+              isValidForm = {isValidForm}
+            />
+            <ContactField
+              type="text"
+              name="address2"
+              placeholder="Endereço 2"
+              setContactProfile={setContactProfile}
+              setInvalidFields={setInvalidFields}
+              isValidForm = {isValidForm}
+            />
+            <ContactField
+              type="text"
+              name="city"
+              placeholder="Cidade"
+              setContactProfile={setContactProfile}
+              setInvalidFields={setInvalidFields}
+              isValidForm = {isValidForm}
+            />
+            <ContactField
+              type="text"
+              name="state"
+              placeholder="Estado"
+              setContactProfile={setContactProfile}
+              setInvalidFields={setInvalidFields}
+              isValidForm = {isValidForm}
+            />
+            <ContactField
+              type="text"
+              name="cep"
+              placeholder="CEP"
+              setContactProfile={setContactProfile}
+              setInvalidFields={setInvalidFields}
+              isValidForm = {isValidForm}
+            />
+          </>
+        );
+        break;
+
       default:
         break;
     }
   }
 
-  return <>{switchType()}</>;
+  return <div className="c-contact-field-set">{switchType()}</div>;
 }
 
 export default ContactFieldSet;

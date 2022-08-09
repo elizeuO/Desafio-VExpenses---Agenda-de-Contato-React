@@ -13,7 +13,7 @@
   src: url(./fonts/Roboto-Black.ttf);
 }
 h2 {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-size: 40px;
   color: #3c3c3b;
 }
@@ -118,6 +118,10 @@ button.c-button {
 }
 button.c-button:hover, button.c-button:focus {
   background: #004886;
+}
+button.c-button[disabled] {
+  background: #b9b9b9;
+  pointer-events: none;
 }
 
 input, select, textarea {
