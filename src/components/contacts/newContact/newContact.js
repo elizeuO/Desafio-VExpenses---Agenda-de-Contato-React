@@ -37,8 +37,6 @@ function NewContact() {
        console.log("Error creating contact ");
        return;
      }
-
-     console.log(response);
   }
 
   return (

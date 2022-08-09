@@ -5,6 +5,7 @@ import Home from "./pages/home/home";
 import { useState } from "react";
 import Novo from "./pages/novo/novo";
 import Footer from "./components/footer/footer";
+import Contato from "./pages/contato/contato";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -21,10 +22,18 @@ function App() {
             <Home user={user} setUser={setUser} sidebarActive={sidebarActive} />
           }
         ></Route>
+
         <Route
           path="/novo"
           element={
             <Novo user={user} setUser={setUser} sidebarActive={sidebarActive} />
+          }
+        ></Route>
+
+        <Route
+          path="/contato"
+          element={
+            <Contato user={user} setUser={setUser} sidebarActive={sidebarActive} />
           }
         ></Route>
       </Routes>

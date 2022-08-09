@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import "./contactItem.scss";
 
-function ContactItem({ name, phone, email, photo }) {
+function ContactItem({ id, name, phone, email, photo }) {
+  const contactLink = "/contato/?id="+id;
+
   return (
-    <a href="" className="c-contact-item">
+    <Link to={contactLink} className="c-contact-item">
       <div className="l-flex l-flex---center l-flex--wrap l-flex--negative">
         <article className="l__col-4">
-
           <img src={photo} className="c-contact-item__photo" />
           {name}
         </article>
@@ -14,7 +16,7 @@ function ContactItem({ name, phone, email, photo }) {
 
         <article className="l__col-4">{email}</article>
       </div>
-    </a>
+    </Link>
   );
 }
 

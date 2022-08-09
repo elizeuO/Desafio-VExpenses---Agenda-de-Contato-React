@@ -35,12 +35,17 @@ function ContactList() {
 
   function formatConnectionsResult(connections) {
     const result = connections.map((person) => {
-      if (undefined !== person.names && undefined !== person.phoneNumbers) {
+      if (undefined !== person.names) {
         const name = person.names[0].displayName;
-        const phone = person.phoneNumbers[0].value;
         const photo = person.photos[0].url;
+        const id = person.resourceName.split("people/")[1];
 
-        const data = { name: name, phone: phone, photo: photo };
+        const data = { id: id, name, photo: photo };
+
+        if (undefined !== person.phoneNumbers) {
+          const phone = person.phoneNumbers[0].value;
+          data.phone = phone;
+        }
 
         if (undefined !== person.emailAddresses) {
           const email = person.emailAddresses[0].value;
@@ -78,6 +83,7 @@ function ContactList() {
             if (contact !== undefined) {
               return (
                 <ContactItem
+                  id={contact.id}
                   name={contact.name}
                   phone={contact.phone}
                   email={contact.email}

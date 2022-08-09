@@ -1,0 +1,18 @@
+@use '../../../assets/general.scss' as *;
+
+.c-contact-details{
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid $colorGray;
+    border-radius: 4px;
+
+    .c-contact-details__item{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: $colorDarkBlue;
+
+        svg{
+            margin-right: 5px;
+        }
+    }
+}
