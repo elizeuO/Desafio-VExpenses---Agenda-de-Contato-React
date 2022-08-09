@@ -181,9 +181,13 @@ button {
     padding-bottom: 40px;
 }
 
+%minContentHeigth{
+    min-height: calc(100vh - 175px)
+}
+
 .c-main {
     @extend %verticalGeneralPadding;
-    min-height: calc(100vh - 175px);
+    @extend %minContentHeigth;
     width: 100%;
 
 }

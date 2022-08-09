@@ -4,7 +4,7 @@ function NotLogged({setUser}) {
   return (
       <div className="c-login-request l-flex l-flex--center l-flex--vertical">
         <div className="c-login-request__info">
-        <h2>Faça login na conta google para utilizar o aplicativo!</h2>
+        <h2>Faça login para utilizar o aplicativo!</h2>
         <GoogleLogin setUser={setUser}/>
         </div>
       </div>

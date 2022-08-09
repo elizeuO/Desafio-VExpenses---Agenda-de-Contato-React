@@ -2,5 +2,9 @@
 
 .c-login-request{
     @extend %center;
-    height: 50vh;
+    @extend %minContentHeigth;
+
+    h2{
+        font-size: 35px;
+    }
 }

@@ -13,7 +13,9 @@
   src: url(./fonts/Roboto-Black.ttf);
 }
 h2 {
-  font-size: 30px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  color: #3c3c3b;
 }
 
 button, a {
@@ -105,15 +107,34 @@ button {
   border: none;
   cursor: pointer;
 }
+button.c-button {
+  padding: 8px 30px;
+  background: #0a7ee3;
+  font-size: 14px;
+  color: #ffff;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+button.c-button:hover, button.c-button:focus {
+  background: #004886;
+}
 
 .c-login-request {
   text-align: center;
 }
 
 .c-main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.c-login-request, .c-main {
+  min-height: calc(100vh - 175px);
+}
+
+.c-main {
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .c-container {
@@ -123,6 +144,6 @@ button {
   max-width: 1200px;
 }
 
-.c-login-request {
-  height: 50vh;
+.c-login-request h2 {
+  font-size: 35px;
 }
