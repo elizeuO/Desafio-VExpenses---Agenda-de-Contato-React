@@ -1,20 +1,30 @@
-@use '../../assets/general.scss' as *;
+@use '../../assets/general.scss'as *;
 
 .c-header {
     background: $colorDarkBlue;
-    color: $colorWhite;
- 
+
     .c-header__logo {
+        @extend %flexCenter;
+        margin: 0 20px;
+        opacity: .9;
+
+        &:hover, &:focus{
+            opacity: 1;
+        }
 
         .c-header__image {
-            margin: 0 10px;
-            max-height: 50px;
+            margin-right: 5px;
+            max-height: 40px;
+        }
+
+        h1 {
+            font-size: 25px;
+            line-height: 27px;
+            font-weight: 600;
+            color: $colorWhite;
+
         }
     }
 
-    h1 {
-        font-size: 30px;
-        line-height: 34px;
-        font-weight: 600;
-    }
+
 }

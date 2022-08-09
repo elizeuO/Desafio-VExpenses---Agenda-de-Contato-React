@@ -1,18 +1,19 @@
-@use '../../assets/general.scss' as *;
+@use '../../assets/general.scss'as *;
 
-.c-sidebar{
+.c-sidebar {
     @extend %transition;
     @extend %verticalGeneralPadding;
     width: 0;
     transform: translateX(-50%);
     overflow: hidden;
 
-    &.active{
+    &.active {
+        padding-right: 60px;
         width: 33.33%;
         transform: translateX(0);
     }
 
-    .c-button{
+    .c-button {
         @extend %flexCenter;
         margin-bottom: 20px;
         padding: 0 10px;
@@ -24,19 +25,42 @@
         font-weight: 600;
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
 
-        &:hover, &:focus{
+        &:hover,
+        &:focus {
             background: $colorLightBlue;
         }
 
-        &:before{
+        &:before {
             content: '+';
             margin-right: 5px;
             font-size: 35px;
         }
-;    }
+    }
+
+
+    .c-sidebar__item {
+        @extend %transition;
+        display: block;
+        padding: 10px 20px;
+        color: $colorDarkGray;
+        border-bottom: 1px solid $colorGray;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: $colorLightGray;
+        }
+
+        svg {
+            margin-right: 10px;
+        }
+
+    }
+
+
 
 }
 
-.c-sidebar.active + main{
+.c-sidebar.active+main {
     width: 66.66%;
 }

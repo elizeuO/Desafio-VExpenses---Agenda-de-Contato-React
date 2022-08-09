@@ -12,30 +12,22 @@ function Header({ setSidebarActive, user }) {
         <div className="l-flex l-flex--center l-flex--wrap l-flex--negative">
           <article className="l__col-4">
             <div className="l-flex l-flex--center">
-              {
-                user &&(
-                  <SidebarToggleButton setSidebarActive={setSidebarActive} />
-                )
-              }
-              
+              {user && (
+                <SidebarToggleButton setSidebarActive={setSidebarActive} />
+              )}
 
               <Link to="/" className="c-header__logo">
                 <img
                   src={logo}
                   className="c-header__image"
                   alt="Agenda VExpenses"
-                ></img>
+                />
+                <h1>Agenda VExpenses</h1>
               </Link>
-
-              <h1>Agenda VExpenses</h1>
             </div>
           </article>
 
-          {
-                user &&(
-                  <Search />
-                )
-              }
+          {user && <Search />}
         </div>
       </div>
     </header>

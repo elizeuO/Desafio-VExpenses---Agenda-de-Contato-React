@@ -1,4 +1,8 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { FaRegUser } from "react-icons/fa";
+import { FaRegFolder } from "react-icons/fa";
+
 import "./sidebar.scss";
 
 function Sidebar({ sidebarActive }) {
@@ -10,9 +14,15 @@ function Sidebar({ sidebarActive }) {
         Criar contato
       </Link>
 
-      <Link to="/" className="c-sidebar__link">
+      <Link to="/" className="c-sidebar__item">
+        <FaRegUser />
         Contatos
       </Link>
+
+      <div className="c-sidebar__item">
+        <FaRegFolder />
+        Grupos
+      </div>
     </aside>
   );
 }

@@ -18,7 +18,7 @@ h2 {
   color: #3c3c3b;
 }
 
-.c-sidebar, button, a {
+.c-sidebar, .c-sidebar .c-sidebar__item, button, a {
   transition: all 300ms;
 }
 
@@ -121,6 +121,7 @@ button.c-button:hover, button.c-button:focus {
 }
 
 input, select, textarea {
+  border: none;
   outline: none;
 }
 
@@ -145,8 +146,8 @@ input, select, textarea {
 
 .c-container {
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
   max-width: 1200px;
 }
 
@@ -156,6 +157,7 @@ input, select, textarea {
   overflow: hidden;
 }
 .c-sidebar.active {
+  padding-right: 60px;
   width: 33.33%;
   transform: translateX(0);
 }
@@ -177,6 +179,19 @@ input, select, textarea {
   content: "+";
   margin-right: 5px;
   font-size: 35px;
+}
+.c-sidebar .c-sidebar__item {
+  display: block;
+  padding: 10px 20px;
+  color: #3c3c3b;
+  border-bottom: 1px solid #b9b9b9;
+  cursor: pointer;
+}
+.c-sidebar .c-sidebar__item:hover, .c-sidebar .c-sidebar__item:focus {
+  background: #f3f3f3;
+}
+.c-sidebar .c-sidebar__item svg {
+  margin-right: 10px;
 }
 
 .c-sidebar.active + main {
