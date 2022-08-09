@@ -45,8 +45,9 @@ npm start
 Siga as instruções abaixo:
 ```
 - Será apresentada uma mensagem dizendo que o google não verificou o app.
-- Clique em avançado
-- Clique em Acessar Agenda de Contatos VExpenses
+- Clique em avançado.
+- Clique em Acessar Agenda de Contatos VExpenses.
+- Clique em continuar.
 
 
 ## Melhorias Futuras

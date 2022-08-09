@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
+import ContactsHeader from "../contactsHeader/contactsHeader";
 import ContactItem from "../contactItem/contactItem";
 
-  // Add exception for lint
-  /* global gapi   google*/
+// Add exception for lint
+/* global gapi   google*/
 
 function ContactList() {
-
   const [contacts, setContacts] = useState([]);
 
   const rendered = contacts.length === 0 ? listContacts() : "";
@@ -33,7 +33,7 @@ function ContactList() {
     setContacts(formatConnectionsResult(connections));
   }
 
-  function formatConnectionsResult(connections){
+  function formatConnectionsResult(connections) {
     const result = connections.map((person) => {
       if (undefined !== person.names && undefined !== person.phoneNumbers) {
         const name = person.names[0].displayName;
@@ -51,8 +51,7 @@ function ContactList() {
       }
     });
 
-    return sortAlphabetically(result)
-
+    return sortAlphabetically(result);
   }
 
   function sortAlphabetically(array) {
@@ -71,19 +70,26 @@ function ContactList() {
 
   return (
     <>
-      {contacts.length > 0 &&
-        contacts.map((contact) => {
-          if (contact !== undefined) {
-            return (
-              <ContactItem
-                name={contact.name}
-                phone={contact.phone}
-                email={contact.email}
-                photo={contact.photo}
-              />
-            );
-          }
-        })}
+      {contacts.length > 0 ? (
+        <>
+          <ContactsHeader />
+
+          {contacts.map((contact) => {
+            if (contact !== undefined) {
+              return (
+                <ContactItem
+                  name={contact.name}
+                  phone={contact.phone}
+                  email={contact.email}
+                  photo={contact.photo}
+                />
+              );
+            }
+          })}
+        </>
+      ) : (
+        <h2>Lista de contatos vazia</h2>
+      )}
     </>
   );
 }
