@@ -5,14 +5,19 @@ import { Link } from "react-router-dom";
 
 const logo = "/favicon.png";
 
-function Header({ setSidebarActive }) {
+function Header({ setSidebarActive, user }) {
   return (
     <header className="c-header">
       <div className="c-container">
         <div className="l-flex l-flex--center l-flex--wrap l-flex--negative">
           <article className="l__col-4">
             <div className="l-flex l-flex--center">
-              <SidebarToggleButton setSidebarActive={setSidebarActive} />
+              {
+                user &&(
+                  <SidebarToggleButton setSidebarActive={setSidebarActive} />
+                )
+              }
+              
 
               <Link to="/" className="c-header__logo">
                 <img
@@ -26,9 +31,11 @@ function Header({ setSidebarActive }) {
             </div>
           </article>
 
-          <article className="l__col-8">
-            <Search />
-          </article>
+          {
+                user &&(
+                  <Search />
+                )
+              }
         </div>
       </div>
     </header>

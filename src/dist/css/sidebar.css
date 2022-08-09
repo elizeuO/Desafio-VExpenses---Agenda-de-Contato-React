@@ -120,6 +120,10 @@ button.c-button:hover, button.c-button:focus {
   background: #004886;
 }
 
+input, select, textarea {
+  outline: none;
+}
+
 .c-sidebar .c-button {
   display: flex;
   justify-content: center;
@@ -129,6 +133,10 @@ button.c-button:hover, button.c-button:focus {
 .c-sidebar, .c-main {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.c-main {
+  min-height: calc(100vh - 175px);
 }
 
 .c-main {
@@ -154,7 +162,7 @@ button.c-button:hover, button.c-button:focus {
 .c-sidebar .c-button {
   margin-bottom: 20px;
   padding: 0 10px;
-  width: 40%;
+  width: 140px;
   background: #08a308;
   color: #ffff;
   font-size: 14px;

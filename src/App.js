@@ -12,7 +12,7 @@ function App() {
 
   return (
     <Router>
-      <Header setSidebarActive={setSidebarActive} />
+      <Header setSidebarActive={setSidebarActive} user={user} />
 
       <Routes>
         <Route
