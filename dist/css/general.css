@@ -145,6 +145,7 @@ input, select, textarea {
 
 .c-main {
   width: 100%;
+  overflow: hidden;
 }
 
 .c-container {

@@ -1,0 +1,29 @@
+@use '../../assets/general.scss'as *;
+
+.c-toast {
+    @extend %transition;
+    color: $colorGray;
+    font-size: 20px;
+    font-weight: 600;
+    animation: surge .5s;
+
+    &.success {
+        color: $colorGreen;
+    }
+
+    &.error {
+        color: $colorRed;
+    }
+
+}
+
+    @keyframes surge {
+        from {
+            transform: translateX(-50%);
+
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }

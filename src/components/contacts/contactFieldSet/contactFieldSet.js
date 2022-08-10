@@ -7,7 +7,7 @@ import { FaEnvelope } from "react-icons/fa";
 
 import "./contactFieldSet.scss";
 
-function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidForm }) {
+function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidForm, setContactCreated }) {
   function switchType() {
     switch (type) {
       case "person":
@@ -25,6 +25,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
               isValidForm = {isValidForm}
+              setContactCreated={setContactCreated}
             />
             <ContactField
               type="text"
@@ -33,6 +34,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
               isValidForm = {isValidForm}
+              setContactCreated={setContactCreated}
             />
           </>
         );
@@ -53,6 +55,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
               isValidForm = {isValidForm}
+              setContactCreated={setContactCreated}
             />
           </>
         );
@@ -73,6 +76,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
               isValidForm = {isValidForm}
+              setContactCreated={setContactCreated}
             />
           </>
         );
@@ -93,6 +97,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
               isValidForm = {isValidForm}
+              setContactCreated={setContactCreated}
             />
             <ContactField
               type="text"
@@ -101,6 +106,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
               isValidForm = {isValidForm}
+              setContactCreated={setContactCreated}
             />
             <ContactField
               type="text"
@@ -109,6 +115,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
               isValidForm = {isValidForm}
+              setContactCreated={setContactCreated}
             />
             <ContactField
               type="text"
@@ -117,6 +124,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
               isValidForm = {isValidForm}
+              setContactCreated={setContactCreated}
             />
             <ContactField
               type="text"
@@ -125,6 +133,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
               isValidForm = {isValidForm}
+              setContactCreated={setContactCreated}
             />
           </>
         );

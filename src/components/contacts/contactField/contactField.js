@@ -8,6 +8,7 @@ function ContactField({
   setContactProfile,
   setInvalidFields,
   isValidForm,
+  setContactCreated
 }) {
   const [isInvalid, setIsInvalid] = useState(false);
   const classValues = isInvalid ? "c-contact-field invalid" : "c-contact-field";
@@ -17,6 +18,9 @@ function ContactField({
     if ("" === input.value) {
       return;
     }
+
+    //Hide toast
+    setContactCreated(false);
 
     if (isValidField(input)) {
       setContactProfile((prevState) => {
