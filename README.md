@@ -16,17 +16,15 @@
 ## Funcionalidades
 - Agenda instegrada com a Google People APi.
 
-- Adição, edição e remoção de contatos.
+- Adição e remoção de contatos.
 
-- Detecção de endereço por CEP (API dos correios).
+- Visualização de contatos.
 
 - Busca de contatos com sugestão.
 
-- Grupos de contatos.
+- Validação nos campos necessários do formulário de cadastro.
 
-- Validação e máscaras nos campos necessários do formulário de cadastro.
-
-- Adição, edição e remoção de contatos.
+- Responsividade
 
 ## Passo a passo para instalação do projeto
 - Instalar o npm
@@ -42,7 +40,7 @@ npm start
 - Fazer login na conta conta google pelo botão da interface. Selecionar a conta ou inserir as credenciais. 
 
 ```
-Siga as instruções abaixo:
+IMPORTANTE - Para utilização da aplicação siga as instruções abaixo:
 ```
 - Será apresentada uma mensagem dizendo que o google não verificou o app.
 - Clique em avançado.
@@ -55,3 +53,7 @@ Siga as instruções abaixo:
 - Persistir o login (o usuário é deslogado quando o navegador é fechado ou a página é atualizada).
 - Múltiplos endereços (a API do google aceita apenas 2).
 - Múltiplos telefones.
+- Detecção de endereço por CEP (API dos correios).
+- Edição de contato
+- Página de resultado da busca.
+- Grupos de contatos.
