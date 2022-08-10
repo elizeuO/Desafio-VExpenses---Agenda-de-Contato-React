@@ -13,9 +13,14 @@
   src: url(./fonts/Roboto-Black.ttf);
 }
 h2 {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-size: 40px;
   color: #3c3c3b;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .c-sidebar, .c-sidebar .c-sidebar__item, button, a {
@@ -54,7 +59,7 @@ h2 {
   margin-right: -12px;
 }
 
-.l__col-12, .l__col-8, .l__col-6, .l__col-4, .l__col-3 {
+.c-main, .l__col-12, .l__col-8, .l__col-6, .l__col-4, .l__col-3 {
   padding: 12px;
 }
 
@@ -108,6 +113,7 @@ button {
   cursor: pointer;
 }
 button.c-button {
+  margin-right: 5px;
   padding: 8px 30px;
   background: #0a7ee3;
   font-size: 14px;
@@ -118,6 +124,10 @@ button.c-button {
 }
 button.c-button:hover, button.c-button:focus {
   background: #004886;
+}
+button.c-button[disabled] {
+  background: #b9b9b9;
+  pointer-events: none;
 }
 
 input, select, textarea {
@@ -137,11 +147,12 @@ input, select, textarea {
 }
 
 .c-main {
-  min-height: calc(100vh - 175px);
+  min-height: calc(100vh - 161px);
 }
 
 .c-main {
   width: 100%;
+  overflow: hidden;
 }
 
 .c-container {
@@ -151,6 +162,38 @@ input, select, textarea {
   max-width: 1200px;
 }
 
+@media screen and (max-width: 1024px) {
+  .l-flex--mobile-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .l__col-8 {
+    width: 100%;
+  }
+
+  .l-flex-mobile-wrap {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 768px) {
+  * {
+    text-align: center !important;
+  }
+
+  .l__col-4 {
+    width: 50%;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+}
+@media screen and (max-width: 478px) {
+  .l__col-4 {
+    width: 100%;
+  }
+}
 .c-sidebar {
   width: 0;
   transform: translateX(-50%);
@@ -196,4 +239,29 @@ input, select, textarea {
 
 .c-sidebar.active + main {
   width: 66.66%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-sidebar {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+    height: 0;
+    transform: translateY(-50%);
+  }
+  .c-sidebar.active {
+    padding-right: 0;
+    width: 100%;
+    transform: translateY(0);
+    height: auto;
+  }
+  .c-sidebar .c-button {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .c-sidebar.active + main {
+    width: 100%;
+  }
 }

@@ -6,7 +6,7 @@ function Contato({user, setUser, sidebarActive}) {
   return (
     <div className="c-container">
       {user ? (
-        <div className="l-flex l-flex--negative">
+        <div className="l-flex l-flex--negative l-flex-mobile-wrap">
           <Sidebar sidebarActive={sidebarActive} />
           <ContactProfile />
         </div>

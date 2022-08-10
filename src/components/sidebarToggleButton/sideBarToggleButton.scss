@@ -61,3 +61,12 @@
     }
 
 }
+
+//Responsive --------------------------------------------------------------------
+
+@media screen and (max-width: 1024px) {
+
+    .c-header__toggle-sidebar{
+        margin-top: 10px;
+    }
+}

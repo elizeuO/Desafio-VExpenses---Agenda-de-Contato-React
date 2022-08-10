@@ -64,3 +64,35 @@
 .c-sidebar.active+main {
     width: 66.66%;
 }
+
+//Responsive --------------------------------------------------------------------
+
+@media screen and (max-width: 768px) {
+
+    .c-sidebar {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
+        height: 0;
+        transform: translateY(-50%);
+        
+
+
+        &.active {
+            padding-right: 0;
+            width: 100%;
+            transform: translateY(0);
+            height: auto;
+        }
+
+        .c-button {
+            margin: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+
+    .c-sidebar.active+main {
+        width: 100%;
+    }
+}

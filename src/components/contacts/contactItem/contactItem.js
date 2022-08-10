@@ -6,7 +6,7 @@ function ContactItem({ id, name, phone, email, photo }) {
 
   return (
     <Link to={contactLink} className="c-contact-item">
-      <div className="l-flex l-flex---center l-flex--wrap l-flex--negative">
+      <div className="l-flex l-flex--center l-flex--wrap l-flex--negative">
         <article className="l__col-4">
           <img src={photo} className="c-contact-item__photo" />
           {name}

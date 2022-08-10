@@ -11,7 +11,7 @@ function Header({ setSidebarActive, user }) {
       <div className="c-container">
         <div className="l-flex l-flex--center l-flex--wrap l-flex--negative">
           <article className="l__col-4">
-            <div className="l-flex l-flex--center">
+            <div className="l-flex l-flex--center l-flex--wrap l-flex--mobile-reverse">
               {user && (
                 <SidebarToggleButton setSidebarActive={setSidebarActive} />
               )}

@@ -36,3 +36,14 @@
 .c-main .c-contact-item:nth-child(even) {
     background: $colorLightGray;
 }
+
+//Responsive --------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+
+    .c-contact-item {
+    article {
+        justify-content: center;
+    }
+}
+}
+

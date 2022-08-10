@@ -218,3 +218,45 @@ input, select, textarea{
     padding-left: 40px;
     max-width: 1200px;
 }
+
+//Responsive --------------------------------------------------------------------
+
+@media screen and (max-width: 1024px) {
+    .l-flex--mobile-reverse{
+        flex-direction: column-reverse;
+    }
+
+    .l__col-8{
+        width: 100%;
+    }
+
+   
+
+    .l-flex-mobile-wrap{
+        flex-wrap: wrap;
+        overflow: hidden;
+       }
+
+}
+
+@media screen and (max-width: 768px) {
+  
+    *{
+        text-align: center !important;
+    }
+    
+    .l__col-4{
+        width: 50%;
+    }
+
+    .mobile-hide{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 478px) {
+    .l__col-4{
+        width: 100%;
+    }
+}
