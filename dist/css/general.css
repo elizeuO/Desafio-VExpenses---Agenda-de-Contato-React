@@ -113,6 +113,7 @@ button {
   cursor: pointer;
 }
 button.c-button {
+  margin-right: 5px;
   padding: 8px 30px;
   background: #0a7ee3;
   font-size: 14px;

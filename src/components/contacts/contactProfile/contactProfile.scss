@@ -16,3 +16,21 @@
         }
     }
 }
+
+.c-button{
+    &.c-button--orange{
+        background: $colorOrange;
+
+        &:hover, &:focus{
+            background: $colorDarkOrange;
+        }
+    }
+
+    &.c-button--red{
+        background: $colorRed;
+
+        &:hover, &:focus{
+            background: $colorDarkRed;
+        }
+    }
+}

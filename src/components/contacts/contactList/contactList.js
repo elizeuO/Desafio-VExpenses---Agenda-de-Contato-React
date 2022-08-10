@@ -7,6 +7,7 @@ import ContactItem from "../contactItem/contactItem";
 
 function ContactList() {
   const [contacts, setContacts] = useState([]);
+  const [notLoadedMessage, setNotLoadedMessage] = useState('Carregando...');
 
   const rendered = contacts.length === 0 ? listContacts() : "";
 
@@ -20,6 +21,7 @@ function ContactList() {
       });
     } catch (err) {
       console.log("Error getting contact list: ");
+      setNotLoadedMessage('Erro ao carregar os contatos!')
       return;
     }
 
@@ -27,6 +29,7 @@ function ContactList() {
 
     if (!connections || connections.length === 0) {
       console.log("No connections found");
+      setNotLoadedMessage('Lista de contatos vazia!')
       return;
     }
 
@@ -94,7 +97,7 @@ function ContactList() {
           })}
         </>
       ) : (
-        <h2>Lista de contatos vazia</h2>
+        <h2>{notLoadedMessage}</h2>
       )}
     </>
   );

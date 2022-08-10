@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaEnvelope, FaMapMarkedAlt, FaPhoneAlt } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import {useNavigate} from 'react-router-dom';
 
 import "./contactProfile.scss";
 
@@ -9,6 +10,7 @@ import "./contactProfile.scss";
 
 function ContactProfile() {
   const [loadedProfile, setLoadedProfile] = useState(false);
+  const [notLoadedMessage, setNotLoadedMessage] = useState("Carregando...");
 
   //Get id from url
   const queryString = window.location.search;
@@ -16,6 +18,24 @@ function ContactProfile() {
   const id = urlParams.get("id");
 
   const rendered = !loadedProfile ? loadContactProfile() : "";
+
+  //Prepare for redirect
+  const navigate = useNavigate();
+
+  async function deleteContactProfile() {
+    let response;
+    try {
+      response = await gapi.client.people.people.deleteContact({
+        resourceName: "people/" + id,
+      });
+    } catch (err) {
+      console.log("Error deleting contact ");
+      return;
+    }
+
+    //Redirect to home
+    navigate("/");
+  }
 
   //Get contact profile with url id
   async function loadContactProfile() {
@@ -31,6 +51,7 @@ function ContactProfile() {
       });
     } catch (err) {
       console.log("Error getting contact ");
+      setNotLoadedMessage("Erro ao carregar contato");
       return;
     }
     prepareProfileData(response.result);
@@ -64,7 +85,6 @@ function ContactProfile() {
   }
 
   function getProfileDetails() {
-
     return (
       <>
         <div className="c-contact-details">
@@ -135,14 +155,14 @@ function ContactProfile() {
       {loadedProfile ? (
         <>
           <h2>{loadedProfile.Nome}</h2>
-          <button className="c-button">Editar</button>
+          <button className="c-button c-button--orange">Editar</button>
 
-          <button className="c-button">Excluir</button>
+          <button className="c-button c-button--red" onClick={deleteContactProfile}>Excluir</button>
 
           {getProfileDetails()}
         </>
       ) : (
-        <h2>Contato inexistente</h2>
+        <h2>{notLoadedMessage}</h2>
       )}
     </main>
   );

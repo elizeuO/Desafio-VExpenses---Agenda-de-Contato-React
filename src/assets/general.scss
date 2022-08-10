@@ -6,7 +6,9 @@ $colorDarkGray: #3c3c3b;
 $colorGray: #b9b9b9;
 $colorLightGray: #f3f3f3;
 $colorOrange: #f7841e;
-$colorRed: red;
+$colorDarkOrange: #df6e0c;
+$colorRed: rgb(221, 2, 2);
+$colorDarkRed: rgb(177, 3, 3);
 $colorLightRed: #ffdede;
 $colorGreen: #08a308;
 $colorDarkBlue: #004886;
@@ -155,6 +157,7 @@ button {
     cursor: pointer;
 
     &.c-button {
+        margin-right: 5px;
         padding: 8px 30px;
         background: $colorLightBlue;
         font-size: 14px;
