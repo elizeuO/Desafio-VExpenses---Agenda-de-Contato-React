@@ -1,0 +1,16 @@
+@use '../../../assets/general.scss' as *;
+
+.c-contact-field-set{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .c-contact-field-set__heading{
+        margin: 10px 0;
+        color: $colorDarkBlue;
+        font-weight: 600;
+
+        svg{
+            margin-right: 5px;
+        }
+    }
+}

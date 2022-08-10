@@ -9,15 +9,28 @@
 
 -	SASS - Empregada para a otimização e organização da criação do CSS.
 	
--	Font awesome - Para inserção dos ícones nos elementos do projeto.
+-	React Icons - Para inserção dos ícones do projeto.
+
+-	Adobe Photoshop - Para edição e criação de imagens.
 
 ## Funcionalidades
-- Lorem Ipsum
+- Agenda instegrada com a Google People APi.
+
+- Adição, edição e remoção de contatos.
+
+- Detecção de endereço por CEP (API dos correios).
+
+- Busca de contatos com sugestão.
+
+- Grupos de contatos.
+
+- Validação e máscaras nos campos necessários do formulário de cadastro.
+
+- Adição, edição e remoção de contatos.
 
 ## Passo a passo para instalação do projeto
 - Instalar o npm
 - Realizar a clonagem do projeto para o seu repositório local.
-- Checar se o branch atual é o desafio, se não trocar para ele.
 - Instalar as dependências
 ```
 npm install
@@ -26,5 +39,19 @@ npm install
 ```
 npm start
 ```
-- Acesse http://localhost:8888
+- Fazer login na conta conta google pelo botão da interface. Selecionar a conta ou inserir as credenciais. 
 
+```
+Siga as instruções abaixo:
+```
+- Será apresentada uma mensagem dizendo que o google não verificou o app.
+- Clique em avançado.
+- Clique em Acessar Agenda de Contatos VExpenses.
+- Clique em continuar.
+
+
+## Melhorias Futuras
+
+- Persistir o login (o usuário é deslogado quando o navegador é fechado ou a página é atualizada).
+- Múltiplos endereços (a API do google aceita apenas 2).
+- Múltiplos telefones.

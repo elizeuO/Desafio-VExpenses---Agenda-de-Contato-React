@@ -1,0 +1,39 @@
+@use '../../../assets/general.scss' as *;
+
+.c-contact-field{
+
+  
+    input{
+        @extend %transition;
+        padding: 20px 5px;
+        width: 100%;
+        color: $colorDarkGray;
+        border-bottom: 1px solid $colorGray;
+        outline: none;
+
+
+        &::placeholder{
+            color: $colorGray;
+        }
+
+        &:focus{
+        background: $colorLightGray;
+        border-color: $colorDarkBlue;
+        }
+    }
+
+    &.invalid{
+        color: $colorRed;
+
+        span{
+            display: block;
+            margin-top: 10px;
+        }
+
+        input{
+            border-color: $colorRed;
+            background: $colorLightRed;
+        }
+    }
+    
+}

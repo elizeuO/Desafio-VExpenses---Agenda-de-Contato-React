@@ -1,0 +1,262 @@
+// Colors ----------------------------------------------------------------------
+
+$colorWhite: #ffff;
+$colorBlack: #222;
+$colorDarkGray: #3c3c3b;
+$colorGray: #b9b9b9;
+$colorLightGray: #f3f3f3;
+$colorOrange: #f7841e;
+$colorDarkOrange: #df6e0c;
+$colorRed: rgb(221, 2, 2);
+$colorDarkRed: rgb(177, 3, 3);
+$colorLightRed: #ffdede;
+$colorGreen: #08a308;
+$colorDarkBlue: #004886;
+$colorLightBlue: #0a7ee3;
+
+// Typography ----------------------------------------------------------------------
+
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Regular.ttf)
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(./fonts/Roboto-Bold.ttf)
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 900;
+    src: url(./fonts/Roboto-Black.ttf)
+}
+
+$fontSizeDefault: 14px;
+$fontSizeSubtitle: 40px;
+$fontFamilyDefault: 'Roboto';
+
+h2 {
+    margin-bottom: 25px;
+    font-size: $fontSizeSubtitle;
+    color: $colorDarkGray;
+}
+
+h3{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+// Normalize --------------------------------------------------------------------
+
+%transition {
+    transition: all 300ms;
+}
+
+// Normalize --------------------------------------------------------------------
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Flex --------------------------------------------------------------------
+
+.l-flex {
+    display: flex;
+}
+
+.l-flex--center {
+    justify-content: center;
+    align-items: center;
+}
+
+.l-flex--wrap {
+    flex-wrap: wrap;
+}
+
+.l-flex--stretch {
+    align-items: stretch;
+}
+
+.l-flex--vertical {
+    flex-direction: row;
+}
+
+.l-flex--negative {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+//Collumns --------------------------------------------------------------------
+
+%colPatterns {
+    padding: 12px;
+}
+
+.l__col--no-padding {
+    padding: 0;
+}
+
+.l__col-3 {
+    @extend %colPatterns;
+    width: 25%;
+}
+
+.l__col-4 {
+    @extend %colPatterns;
+    width: 33.33%;
+}
+
+.l__col-6 {
+    @extend %colPatterns;
+    width: 50%;
+}
+
+.l__col-8 {
+    @extend %colPatterns;
+    width: 66.66%;
+}
+
+.l__col-12 {
+    @extend %colPatterns;
+    width: 100%;
+}
+
+
+//General --------------------------------------------------------------------
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    color: $colorBlack;
+    font-size: $fontSizeDefault;
+    font-family: $fontFamilyDefault;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    @extend %transition;
+    color: $colorBlack;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+button {
+    @extend %transition;
+    border: none;
+    cursor: pointer;
+
+    &.c-button {
+        margin-right: 5px;
+        padding: 8px 30px;
+        background: $colorLightBlue;
+        font-size: 14px;
+        color: $colorWhite;
+        font-weight: 600;
+        border-radius: 4px;
+        box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 20%);
+
+        &:hover,
+        &:focus {
+            background: $colorDarkBlue;
+            ;
+        }
+
+        &[disabled]{
+            background: $colorGray;
+            pointer-events: none;
+        }
+    }
+}
+
+input, select, textarea{
+    border: none;
+    outline: none;
+}
+
+
+%center {
+    text-align: center;
+}
+
+%flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%verticalGeneralPadding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+%minContentHeigth{
+    min-height: calc(100vh - 161px)
+}
+
+.c-main {
+    @extend %colPatterns;
+    @extend %verticalGeneralPadding;
+    @extend %minContentHeigth;
+    width: 100%;
+    overflow: hidden;
+}
+
+.c-container {
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    max-width: 1200px;
+}
+
+//Responsive --------------------------------------------------------------------
+
+@media screen and (max-width: 1024px) {
+    .l-flex--mobile-reverse{
+        flex-direction: column-reverse;
+    }
+
+    .l__col-8{
+        width: 100%;
+    }
+
+   
+
+    .l-flex-mobile-wrap{
+        flex-wrap: wrap;
+        overflow: hidden;
+       }
+
+}
+
+@media screen and (max-width: 768px) {
+  
+    *{
+        text-align: center !important;
+    }
+    
+    .l__col-4{
+        width: 50%;
+    }
+
+    .mobile-hide{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 478px) {
+    .l__col-4{
+        width: 100%;
+    }
+}

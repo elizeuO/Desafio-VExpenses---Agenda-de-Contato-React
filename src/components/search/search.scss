@@ -1,0 +1,26 @@
+@use '../../assets/general.scss' as *;
+
+.c-search{
+    @extend %flexCenter;
+    @extend %transition;
+    padding: 10px;
+    background: $colorLightGray;
+    border-radius: 4px;
+
+    &:hover, &.active{
+        background: $colorWhite;
+    }
+
+    & svg{
+        color: $colorGray;
+    }
+
+    input{
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 100%;
+        background: transparent;
+    }
+
+    
+}

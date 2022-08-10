@@ -1,0 +1,49 @@
+@use '../../../assets/general.scss'as *;
+
+.c-contact-item {
+    display: block;
+    padding: 0 10px;
+    cursor: pointer;
+    background: $colorWhite;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 0 8px 0px rgb(0 0 0 / 30%);
+        transform: translateY(-10px);
+        z-index: 2;
+    }
+
+    .c-contact-item__photo {
+        display: inline-block;
+        margin-right: 5px;
+        height: 30px;
+        width: 30px;
+        background: $colorLightBlue;
+        color: $colorWhite;
+        line-height: 30px;
+        text-transform: uppercase;
+        border-radius: 50%;
+    }
+
+    article {
+        @extend %flexCenter;
+        justify-content: start;
+    }
+
+
+}
+
+.c-main .c-contact-item:nth-child(even) {
+    background: $colorLightGray;
+}
+
+//Responsive --------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+
+    .c-contact-item {
+    article {
+        justify-content: center;
+    }
+}
+}
+

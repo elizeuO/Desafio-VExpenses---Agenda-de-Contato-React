@@ -1,0 +1,10 @@
+@use '../../assets/general.scss' as *;
+
+.c-login-request{
+    @extend %center;
+    @extend %minContentHeigth;
+
+    h2{
+        font-size: 35px;
+    }
+}
