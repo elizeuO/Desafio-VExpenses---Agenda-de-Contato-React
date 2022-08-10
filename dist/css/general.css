@@ -130,7 +130,9 @@ button.c-button[disabled] {
   pointer-events: none;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   border: none;
   outline: none;
 }
@@ -164,15 +166,15 @@ input, select, textarea {
   .l__col-8 {
     width: 100%;
   }
-
-  .l-flex-mobile-wrap {
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
 }
 @media screen and (max-width: 768px) {
   * {
     text-align: center !important;
+  }
+
+  .l-flex-mobile-wrap {
+    flex-wrap: wrap;
+    overflow: hidden;
   }
 
   .l__col-4 {
