@@ -28,15 +28,25 @@ function NewContact() {
            },
            phoneNumbers: [
              {
-               value: contactProfile.phoneNumber,
+              value: contactProfile.phoneNumber,
              },
            ],
+           addresses: 
+            {
+              streetAddress: contactProfile.streetAddress,
+              extendedAddress: contactProfile.extendedAddress,
+              postalCode: contactProfile.postalCode,
+              city: contactProfile.city,
+              region: contactProfile.region,
+            },
          },
        });
      } catch (err) {
        console.log("Error creating contact ");
        return;
      }
+
+     console.log(response)
   }
 
   return (

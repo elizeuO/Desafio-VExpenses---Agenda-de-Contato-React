@@ -88,7 +88,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
 
             <ContactField
               type="text"
-              name="address1"
+              name="streetAddress"
               placeholder="Endereço 1"
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
@@ -96,7 +96,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
             />
             <ContactField
               type="text"
-              name="address2"
+              name="extendedAddress"
               placeholder="Endereço 2"
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
@@ -112,7 +112,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
             />
             <ContactField
               type="text"
-              name="state"
+              name="region"
               placeholder="Estado"
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}
@@ -120,7 +120,7 @@ function ContactFieldSet({ type, setContactProfile, setInvalidFields, isValidFor
             />
             <ContactField
               type="text"
-              name="cep"
+              name="postalCode"
               placeholder="CEP"
               setContactProfile={setContactProfile}
               setInvalidFields={setInvalidFields}

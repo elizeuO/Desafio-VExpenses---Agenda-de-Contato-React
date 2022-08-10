@@ -64,7 +64,6 @@ function ContactProfile() {
   }
 
   function getProfileDetails() {
-    console.log(loadedProfile);
 
     return (
       <>
