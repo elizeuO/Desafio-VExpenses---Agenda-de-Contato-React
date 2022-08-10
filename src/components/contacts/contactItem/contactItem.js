@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import "./contactItem.scss";
 
-function ContactItem({ id, name, phone, email, photo, setIsTyping, isSearch }) {
+function ContactItem({ id, name, phone, email, photo, isSearch }) {
   const contactLink = "/contato/?id=" + id;
 
   return (
-    <Link to={contactLink} className="c-contact-item" onClick={()=>{
-      setIsTyping(false);
-    }}>
+    <Link
+      to={contactLink}
+      className="c-contact-item"
+      onClick={() => {
+      }}
+    >
       <div className="l-flex l-flex--center l-flex--wrap l-flex--negative">
         <article className="l__col-4">
           <img src={photo} className="c-contact-item__photo" />

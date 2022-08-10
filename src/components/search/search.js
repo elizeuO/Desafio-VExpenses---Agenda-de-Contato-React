@@ -102,7 +102,9 @@ function Search() {
   return (
     <>
       <article className="l__col-8">
-        <div className={classValues}>
+        <div className={classValues} onMouseLeave={()=>{
+          setIsTyping(false)
+        }}>
           <FaSearch />
           <input
             type="text"
